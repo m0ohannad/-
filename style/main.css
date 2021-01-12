@@ -1,0 +1,143 @@
+html, body {
+    position: relative;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+}
+  
+body {
+    background-color: #eeeeee;
+    font-family: "helvetica", sans-serif;
+    font-size: 16px;
+    transform: translate3d(0, 0, 0);
+    background: linear-gradient(90deg, #9f8189 0%, #fbeee6 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#1e5799", endColorstr="#7db9e8",GradientType=1 );
+}
+  
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    margin: 0px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    position: relative;
+    width: 215px;
+    height: 260px;
+    transform-style: preserve-3d;
+    transform: rotatey(0deg) translatex(0px) translatey(0px);
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.4);
+    margin: 5px;
+    cursor: pointer;
+}
+/* .card:hover {
+    transform: rotatey(45deg) translatex(0px) translatey(0px);
+} */
+.card.open {
+    /* width: 215px;
+    height: 260px; */
+    width: 255px;
+    height: 300px;
+    transform: rotatey(-180deg) translatex(0px) translatey(0px);
+}
+.card .front-facing {
+    transform: rotateY(0deg) translateZ(2px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #ecf0f1;
+    border: 2px white solid;
+    border-radius: 5px;
+}
+.card .front-facing .name {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    font-size: 42px;
+    margin: -35px 0 0 0;
+    text-align: center;
+    color: #333535;
+}
+.card .front-facing .more {
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    /* left: 0; */
+    text-transform: uppercase;
+    font-size: 12px;
+    margin: 15px 0 0 0;
+    text-align: center;
+    /* color: #3498db; */
+    background: url(flip.svg) no-repeat;
+    background-position: 55px 0px;
+    /* background-color: #3498db; */
+    background-size: contain;
+    opacity: 0.5;
+}
+.card .front-facing .top {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 12px;
+    /* color: #2980b9; */
+    opacity: 0.5;
+}
+.card .front-facing .number {
+    font-family: 'aGoldan';
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 12px;
+    /* color: #2980b9; */
+    opacity: 0.5;
+}
+.card .back-facing {
+    transform: rotateY(180deg) translateZ(0px);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #ecf0f1;
+    border: 2px white solid;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+}
+.card .back-facing p {
+    font-size: 14px;
+    margin: 0;
+}
+.card .back-facing a.btn {
+    display: inline-block;
+    background-color: white;
+    padding: 5px 15px;
+    margin: 20px 0 0 0;
+    color: #eee;
+    background-color: #3498db;
+    text-decoration: none;
+    border-radius: 3px;
+}
+.card .back-facing a.btn:hover, .card .back-facing a.btn:focus {
+    color: #fff;
+    background-color: #2980b9;
+}
