@@ -46,8 +46,8 @@ body {
 .card.open {
     /* width: 215px;
     height: 260px; */
-    width: 255px;
-    height: 300px;
+    width: 305px;
+    height: 350px;
     transform: rotatey(-180deg) translatex(0px) translatey(0px);
 }
 .card .front-facing {
