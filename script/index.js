@@ -9,7 +9,7 @@ const renderData = (list) => {
         const back = document.createElement('div');
         back.className = "back-facing";
         front.innerHTML = ` <h1 class="name">${name.name}</h1>
-                            <p class="more">عرض التفاصيل</p>
+                            <p class="more">عرض التفاصيل </p>
                             <span class="top">جَلَّ جَلَالُهُ</span>
                             <span class="number">${index+1}</span>`;
         back.innerHTML = `  <p>ا<b>المعنى: </b>${name.meaning}</p><br/>
