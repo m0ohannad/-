@@ -12,7 +12,7 @@ const renderData = (list) => {
                             <p class="more">عرض التفاصيل</p>
                             <span class="top">جَلَّ جَلَالُهُ</span>
                             <span class="number">${index+1}</span>`;
-        back.innerHTML = `  <p>ا<b>المعنى: </b>${name.meaning}</p><br/>
+        back.innerHTML = `  <p><b>المعنى: </b>${name.meaning}</p><br/>
                             <p><b>الورود: </b>${name.occurrence}</p><br/>
                             <p><b>الشاهد: </b>${name.evidence}</p>
                             <p><a class="btn" href="${name.pdf}" target="_blank">تحميل الملف</a></p>`;
