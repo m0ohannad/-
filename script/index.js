@@ -15,7 +15,8 @@ const renderData = (list) => {
         back.innerHTML = `  <p><b>المعنى: </b>${name.meaning}</p><br/>
                             <p><b>الورود: </b>${name.occurrence}</p><br/>
                             <p><b>الشاهد: </b>${name.evidence}</p>
-                            <p><a class="btn" href="${name.pdf}" target="new" >تحميل الملف</a></p>`;
+                            <p><a class="btn" href="${name.pdf}" onclick="window.open(this.href, 'Snopzer',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" >تحميل الملف</a></p>`;
         card.appendChild(front);
         card.appendChild(back);
         container.appendChild(card);
