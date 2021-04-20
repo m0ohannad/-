@@ -15,7 +15,7 @@ const renderData = (list) => {
         back.innerHTML = `  <p><b>المعنى: </b>${name.meaning}</p><br/>
                             <p><b>الورود: </b>${name.occurrence}</p><br/>
                             <p><b>الشاهد: </b>${name.evidence}</p>
-                            <p><a class="btn" href="${name.pdf}" target="_blank" download="${index+1}" >تحميل الملف</a></p>`;
+                            <p><a class="btn" href="${name.pdf}" target="popup" download="${index+1}" >تحميل الملف</a></p>`;
         card.appendChild(front);
         card.appendChild(back);
         container.appendChild(card);
